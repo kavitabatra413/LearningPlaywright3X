@@ -1,0 +1,4 @@
+//10 20 30
+let arr = [10, 20, 30];
+let reverse1 = arr.reverse();
+console.log("reverse of Array: is", reverse1);
