@@ -14,3 +14,4 @@ for (let i = 0; i < ResultOftest.length; i++) {
 totalTests = ResultOftest.length;
 let passRate = (passCount / totalTests) * 100;
 console.log ("passRate is" + passRate);
+
