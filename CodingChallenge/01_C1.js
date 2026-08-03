@@ -1,3 +1,4 @@
+//API Response Status Code Validator
 let code  = 200;
 switch (code) {
 

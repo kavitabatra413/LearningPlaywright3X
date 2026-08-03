@@ -1,3 +1,4 @@
+//Test Case Result Counter
 let passCount   = 0;
 let failCount   = 0;
 
