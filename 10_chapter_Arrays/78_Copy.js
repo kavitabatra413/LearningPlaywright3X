@@ -17,8 +17,8 @@ let copy4 = original.concat();
 
 console.log(" ---- ");
 copy1.push(99);
-console.log(original);
-console.log(copy1);
+//console.log(original);
+//console.log(copy1);
 
 // Deep cOPY
 let deep_copy_array = original;
