@@ -14,3 +14,5 @@
  **/
 
 var g = 10; // cmd + /, ctr + /
+
+//Ctrl + / again → it removes the comment.
