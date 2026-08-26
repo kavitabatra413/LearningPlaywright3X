@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Async JavaScript Tutorial</title>
+<style>
+  :root { --bg:#f6f8fb; --card:#ffffff; --ink:#172033; --muted:#5d687a; --accent:#4f46e5; --line:#e4e8f0; --code:#111827; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:Inter,Segoe UI,Arial,sans-serif; background:var(--bg); color:var(--ink); line-height:1.65; }
+  header { background:linear-gradient(135deg,#111827,#3730a3); color:white; padding:64px 20px; }
+  .wrap { max-width:1050px; margin:auto; }
+  h1 { font-size:clamp(2.2rem,5vw,4rem); line-height:1.1; margin:0 0 14px; }
+  h2 { margin-top:0; font-size:1.8rem; }
+  h3 { margin-bottom:8px; }
+  .subtitle { font-size:1.15rem; max-width:800px; opacity:.9; }
+  .badge { display:inline-block; padding:6px 12px; border:1px solid rgba(255,255,255,.35); border-radius:999px; margin-bottom:18px; font-size:.85rem; }
+  main { padding:36px 20px 70px; }
+  section { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:30px; margin:22px 0; box-shadow:0 5px 18px rgba(15,23,42,.05); }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+  .mini { background:#f8fafc; border:1px solid var(--line); border-radius:14px; padding:18px; }
+  code { font-family:Consolas,Monaco,monospace; }
+  pre { background:var(--code); color:#e5e7eb; padding:20px; border-radius:14px; overflow:auto; font-size:.92rem; }
+  .keyword { color:#4338ca; font-weight:700; }
+  .tip { border-left:5px solid var(--accent); background:#eef2ff; padding:15px 18px; border-radius:8px; }
+  .warning { border-left:5px solid #d97706; background:#fff7ed; padding:15px 18px; border-radius:8px; }
+  table { width:100%; border-collapse:collapse; margin-top:15px; }
+  th,td { border-bottom:1px solid var(--line); padding:13px; text-align:left; vertical-align:top; }
+  th { background:#f8fafc; }
+  .flow { font-weight:700; color:#3730a3; }
+  footer { text-align:center; color:var(--muted); padding:30px 20px 50px; }
+  @media(max-width:650px){ section{padding:22px;} pre{font-size:.8rem;} }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <span class="badge">JavaScript Tutorial • Async Programming</span>
+    <h1>Async JavaScript Made Simple</h1>
+    <p class="subtitle">Understand <strong>async</strong>, <strong>await</strong>, <strong>Promise.all()</strong>, <strong>Promise.race()</strong>, <strong>new Promise()</strong> and <strong>callbacks</strong> — with practical examples and a QA/automation mindset.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section>
+  <h2>1. The Big Picture</h2>
+  <p>JavaScript often starts an operation that finishes later — for example, an API request, file operation, timer or browser action. Instead of blocking everything while waiting, JavaScript can continue with other work and handle the result when it becomes available.</p>
+  <div class="grid">
+    <div class="mini"><h3>Callback</h3><p>“Call this function when the work finishes.”</p></div>
+    <div class="mini"><h3>Promise</h3><p>“I represent the future result of this operation.”</p></div>
+    <div class="mini"><h3>async</h3><p>Makes a function return a Promise.</p></div>
+    <div class="mini"><h3>await</h3><p>Waits for a Promise inside an async function.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>2. Callback</h2>
+  <p>A <strong>callback</strong> is a function passed to another function so it can be called later, usually when an operation completes.</p>
+<pre><code>function getData(callback) {
+  setTimeout(() =&gt; {
+    callback("Data received");
+  }, 1000);
+}
+
+getData((result) =&gt; {
+  console.log(result);
+});</code></pre>
+  <p class="flow">Flow: Start task → task completes → callback runs.</p>
+  <div class="warning"><strong>Watch out:</strong> many nested callbacks can become difficult to read and maintain (“callback hell”). Promises provide a cleaner model for many asynchronous workflows.</div>
+</section>
+
+<section>
+  <h2>3. new Promise()</h2>
+  <p>The <code>Promise</code> constructor creates a Promise. Its executor receives two functions: <code>resolve</code> for success and <code>reject</code> for failure.</p>
+<pre><code>function getData() {
+  return new Promise((resolve, reject) =&gt; {
+    setTimeout(() =&gt; {
+      const success = true;
+
+      if (success) {
+        resolve("Data received");
+      } else {
+        reject(new Error("Something went wrong"));
+      }
+    }, 1000);
+  });
+}
+
+getData()
+  .then(data =&gt; console.log(data))
+  .catch(error =&gt; console.error(error));</code></pre>
+  <div class="tip"><strong>Important:</strong> <code>new Promise()</code> is mainly useful when you need to create a Promise around an API that does not already provide one, such as a callback-based API. If an API already returns a Promise, you normally do not need to wrap it in another Promise.</div>
+</section>
+
+<section>
+  <h2>4. async</h2>
+  <p>Putting <code>async</code> before a function makes it an <strong>async function</strong>. An async function always returns a Promise.</p>
+<pre><code>async function getUser() {
+  return "Kavita";
+}
+
+console.log(getUser()); // Promise</code></pre>
+  <p>The returned Promise fulfills with <code>"Kavita"</code>.</p>
+</section>
+
+<section>
+  <h2>5. await</h2>
+  <p><code>await</code> is used to wait for a Promise to settle and gives you its fulfillment value. It is normally used inside an async function (with top-level await also available in JavaScript modules).</p>
+<pre><code>function getData() {
+  return new Promise(resolve =&gt; {
+    setTimeout(() =&gt; resolve("Data received"), 1000);
+  });
+}
+
+async function test() {
+  console.log("Start");
+
+  const data = await getData();
+
+  console.log(data);
+  console.log("End");
+}
+
+test();</code></pre>
+  <p class="flow">Flow: Start → await Promise → Promise fulfills → continue → End.</p>
+  <div class="tip"><strong>Key idea:</strong> <code>await</code> pauses the execution of the current async function at that point; it does not freeze the entire JavaScript runtime.</div>
+</section>
+
+<section>
+  <h2>6. Promise.all()</h2>
+  <p>Use <code>Promise.all()</code> when multiple asynchronous tasks can run concurrently and you need <strong>all of them</strong> to succeed.</p>
+<pre><code>const api1 = fetch("/users");
+const api2 = fetch("/products");
+const api3 = fetch("/orders");
+
+const [users, products, orders] =
+  await Promise.all([api1, api2, api3]);</code></pre>
+  <p>All three operations can be started without waiting for one another. The returned Promise fulfills with results in the <strong>same order as the input</strong>. If any input Promise rejects, <code>Promise.all()</code> rejects.</p>
+  <div class="tip"><strong>QA example:</strong> Fetch user details, product details and order details independently, then continue only after all three responses are available.</div>
+</section>
+
+<section>
+  <h2>7. Promise.race()</h2>
+  <p><code>Promise.race()</code> settles when the <strong>first input Promise settles</strong> — whether it fulfills or rejects.</p>
+<pre><code>const fast = new Promise(resolve =&gt;
+  setTimeout(() =&gt; resolve("Fast response"), 1000)
+);
+
+const slow = new Promise(resolve =&gt;
+  setTimeout(() =&gt; resolve("Slow response"), 3000)
+);
+
+const result = await Promise.race([fast, slow]);
+
+console.log(result); // Fast response</code></pre>
+  <p class="flow">Flow: Start multiple tasks → first one settles → race result settles.</p>
+  <div class="tip"><strong>Practical use:</strong> Implement a timeout by racing an API request against a timer that rejects after a limit.</div>
+<pre><code>const response = await Promise.race([
+  fetch("/api/data"),
+  new Promise((_, reject) =&gt;
+    setTimeout(() =&gt; reject(new Error("Timeout")), 5000)
+  )
+]);</code></pre>
+</section>
+
+<section>
+  <h2>8. Promise.all() vs Promise.race()</h2>
+  <table>
+    <thead><tr><th>Feature</th><th>Promise.all()</th><th>Promise.race()</th></tr></thead>
+    <tbody>
+      <tr><td>Waits for</td><td>All inputs to fulfill</td><td>First input to settle</td></tr>
+      <tr><td>If one rejects</td><td>Result rejects</td><td>Result rejects only if the first settled input rejects</td></tr>
+      <tr><td>Typical use</td><td>Multiple required API calls</td><td>Timeout / first-response scenarios</td></tr>
+      <tr><td>Result</td><td>Array of fulfillment values</td><td>Value/reason from the first settled input</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>9. Sequential vs Concurrent Async Code</h2>
+  <h3>Sequential</h3>
+<pre><code>const user = await getUser();
+const orders = await getOrders();
+const products = await getProducts();</code></pre>
+  <p>Each call waits for the previous one. This is correct when the operations depend on one another, but unnecessary waiting can occur when they are independent.</p>
+
+  <h3>Concurrent</h3>
+<pre><code>const [user, orders, products] = await Promise.all([
+  getUser(),
+  getOrders(),
+  getProducts()
+]);</code></pre>
+  <p>Independent operations are started together, and the code waits for all required results.</p>
+</section>
+
+<section>
+  <h2>10. A Simple Mental Model</h2>
+  <div class="grid">
+    <div class="mini"><h3>Callback</h3><p><strong>“Tell me when you're done.”</strong></p></div>
+    <div class="mini"><h3>Promise</h3><p><strong>“Here is an object representing the future result.”</strong></p></div>
+    <div class="mini"><h3>async</h3><p><strong>“This function works with Promises.”</strong></p></div>
+    <div class="mini"><h3>await</h3><p><strong>“Pause this async function until this Promise settles.”</strong></p></div>
+    <div class="mini"><h3>Promise.all</h3><p><strong>“I need all of these.”</strong></p></div>
+    <div class="mini"><h3>Promise.race</h3><p><strong>“I care about the first one to settle.”</strong></p></div>
+  </div>
+</section>
+
+<section>
+  <h2>11. Quick Interview Questions</h2>
+  <ol>
+    <li>Does an <code>async</code> function return a Promise?</li>
+    <li>Where can <code>await</code> normally be used?</li>
+    <li>What happens to <code>Promise.all()</code> if one Promise rejects?</li>
+    <li>Does <code>Promise.race()</code> wait for all Promises?</li>
+    <li>When should you use <code>new Promise()</code>?</li>
+    <li>What problem can excessive callback nesting create?</li>
+    <li>When is <code>Promise.all()</code> better than sequential <code>await</code>?</li>
+  </ol>
+</section>
+
+<section>
+  <h2>12. One Example Combining Everything</h2>
+<pre><code>function getTestData() {
+  return new Promise(resolve =&gt; {
+    setTimeout(() =&gt; resolve("Test data ready"), 1000);
+  });
+}
+
+function getEnvironment() {
+  return new Promise(resolve =&gt; {
+    setTimeout(() =&gt; resolve("QA environment ready"), 1500);
+  });
+}
+
+async function runTestSetup() {
+  console.log("Starting setup...");
+
+  const [data, environment] = await Promise.all([
+    getTestData(),
+    getEnvironment()
+  ]);
+
+  console.log(data);
+  console.log(environment);
+  console.log("Setup complete.");
+}
+
+runTestSetup();</code></pre>
+  <p>This pattern is especially useful in test automation when independent setup tasks can run concurrently.</p>
+</section>
+
+<section>
+  <h2>Final Cheat Sheet</h2>
+  <table>
+    <thead><tr><th>Keyword / API</th><th>Remember it as</th></tr></thead>
+    <tbody>
+      <tr><td><code>callback</code></td><td>Run this function later</td></tr>
+      <tr><td><code>new Promise()</code></td><td>Create a Promise manually</td></tr>
+      <tr><td><code>async</code></td><td>This function returns a Promise</td></tr>
+      <tr><td><code>await</code></td><td>Wait for a Promise inside async code</td></tr>
+      <tr><td><code>Promise.all()</code></td><td>Wait for all required operations</td></tr>
+      <tr><td><code>Promise.race()</code></td><td>Use the first operation to settle</td></tr>
+    </tbody>
+  </table>
+</section>
+
+</main>
+
+<footer>
+  <p>JavaScript Async Programming Tutorial • Designed as a shareable learning resource</p>
+</footer>
+</body>
+</html>

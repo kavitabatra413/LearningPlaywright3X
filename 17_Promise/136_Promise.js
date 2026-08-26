@@ -7,8 +7,9 @@ let order = new Promise(function(resolve, reject){
         else{
             reject("Order cancelled");
         }
-
-
 });
 
-console.log(order);
+console.log(order); //UnhandledPromiseRejection
+console.log(order.catch(function(err) { //err= "Order cancelled"
+    console.log(err);
+}));

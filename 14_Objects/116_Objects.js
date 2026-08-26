@@ -1,6 +1,6 @@
-// let a = { status: "pass" };
-// console.log(a.status);
-// console.log(a["status"]);
+ let a = { status: "pass" };
+ console.log(a.status);
+ console.log(a["status"]);
 
 // let a1 = { status: 'pass' };
 // console.log(a1.status);
@@ -13,14 +13,15 @@
 let a = { status: "pass" };
 let b = a;  //Copy the reference
 b.status = "fail";
-console.log(a.status);
+console.log(a.status);//fail
 
 
 let c = { status: "pass" };
 let d = { status: "pass" };
-console.log(c === d);
+console.log(c === d); //false
 
 
+//both same result
 const t_json = {
     "name": "pramod",
     "age": 10

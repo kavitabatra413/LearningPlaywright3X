@@ -1,7 +1,7 @@
 function makeCounter(start = 0) {
     let count = start; 
     return {
-        increment(){ count++;},
+        increment(){ count++;}, //increment is not created as standalone function
         decrement() { count--; },
         get() { return count; }
     };
@@ -15,4 +15,4 @@ console.log(counter.get());
 counter.decrement();
 console.log(counter.get());
 
-// increment();
+//increment(); //ReferenceError: increment is not defined

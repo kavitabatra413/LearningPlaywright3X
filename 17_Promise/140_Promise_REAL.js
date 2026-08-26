@@ -23,7 +23,10 @@ function clickLogin() {
     });
 }
 
-
+/*Think of each .then() as waiting for the Promise returned by the previous step.
+Return goToLogin();
+It returns the next Promise to the chain, so the next .then() waits for goToLogin().
+"Take the Promise returned by goToLogin() and give it to the next .then()."*/
 openBrowser()
     .then(function (msg) {
         console.log("Step 1", msg);

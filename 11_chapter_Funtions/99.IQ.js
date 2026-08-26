@@ -1,7 +1,7 @@
 var a = "Pramod";
 
 if(true){
-    console.log(a);
+    console.log(a);//Pramod
     var a = "temp";
-    console.log(a);
+    console.log(a);//temp
 }

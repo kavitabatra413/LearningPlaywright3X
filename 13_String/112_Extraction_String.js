@@ -15,3 +15,10 @@ str.substring(6, 10);  // "Test"
 // at() for single chars
 str.at(0);   // "L"
 str.at(-1);  // "1"
+
+//substring() → swaps start and end if start > end
+"JavaScript".substring(0, 4);     // ""
+"JavaScript".substring(4, 0);  // "Java"
+
+console.log("JavaScript".slice(0, 4));  //Java
+console.log("JavaScript".slice(4, 0)); //start > end → "" (empty string)

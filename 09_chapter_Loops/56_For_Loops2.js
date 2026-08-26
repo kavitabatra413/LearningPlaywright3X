@@ -6,6 +6,7 @@
 //     console.log(pramod);
 // }
 
+//endless loop
 // for (let pramod = 0; ; pramod++) {
 //     console.log(pramod);
 // }

@@ -23,3 +23,7 @@ console.log(thirdOnly); // 30
 let p = 1, q = 2;
 [p, q] = [q, p];
 console.log(p, q); // 2 1
+
+// Default values — used only when the slot is undefined
+let [aa , bb, cc] = [11, 22];
+console.log(aa , bb, cc); // 11 22 undefined

@@ -1,3 +1,4 @@
+//normal  function cdefinition
 function greet(name){
     return `Hello, ${name}`;
 }

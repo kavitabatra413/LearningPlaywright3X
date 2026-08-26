@@ -2,9 +2,11 @@ function doubleMe(a){
     return a*2;
 }
 
+//arrow function with argument
 const doubtA = (a)=> a*2;
 doubtA(10);
 
+//arrow function no argument
 const getEnv = () => "staging";
 console.log(getEnv());
 

@@ -23,6 +23,11 @@
 //     .then(function (r) { console.log("All:", r); })
 //     .catch(function (err) { console.log("Stopped:", err); });
 
+/*Exactly — you did not define status, value, or reason yourself. 
+They are properties automatically created by JavaScript's 
+Promise.allSettled().
+allSettled() waits for all three promises and 
+creates an array of result objects.*/
 
 Promise.allSettled([
     Promise.resolve("API 200"),

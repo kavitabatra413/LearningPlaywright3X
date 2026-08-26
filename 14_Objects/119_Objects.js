@@ -15,3 +15,14 @@ user.city = "NYC";
 user.age = 31;
 
 console.log(user);
+
+let user1 = {
+    name: "kavita",
+    age: 48,
+    email: "kavita@example.com"
+};
+console.log(user1);
+
+user1.city = "NYC";
+user1.age = 31;
+console.log(user1);

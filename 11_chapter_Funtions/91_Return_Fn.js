@@ -10,10 +10,11 @@ function getStatus(code) {
     }
 }
 
-getStatus(200); 
-getStatus(404);
-getStatus(500); 
+console.log(getStatus(200)); 
+console.log(getStatus(404));
+console.log(getStatus(500)); 
 
+console.log("----");
 
 // Returns nothing → undefined
 function logTest(name) {
@@ -23,8 +24,21 @@ function logTest(name) {
 
 logTest("Hi this is a a log");
 
+console.log("----");
 
 function aaa() {
     return [2, 2, 3, 5, 4];
-    /// return {"name : pramod"}; - object
+    //return {"name : pramod"}; - object
 }
+
+let result = aaa();
+console.log(result);
+
+console.log("----object");
+
+function aaa1() {
+   return {name : "pramod"}; 
+}
+
+let result1 = aaa1();
+console.log(result1);

@@ -12,7 +12,7 @@ grid[0][0] = 99;
 console.log(grid);
 
 console.log(grid.length); // 3 — number of rows
-console.log(grid[0].length);
+console.log(grid[0].length); //3
 
 console.log(grid[grid.length - 1][grid[0].length - 1]);
 console.log(grid[2][2]);

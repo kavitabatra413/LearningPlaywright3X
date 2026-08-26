@@ -4,6 +4,7 @@ let scores = [
     [95, 88, 92]    // student 2, 275
 ];
 
+//sum of rows
 let rowSums = scores.map(row => row.reduce((a,b) => a+b));
 console.log(rowSums);
 
@@ -13,10 +14,11 @@ let suiteResults = [
     ["checkout-fail", "payment-fail", "confirm-pass"]   // Payment suite
 ];
 
-for (let i = 0; i < suiteResults.length; i++) {
-    for (let j = 0; j < suiteResults[i].length; j++) {
+for (let i = 0; i < suiteResults.length; i++) { // 3 rows
+    for (let j = 0; j < suiteResults[i].length; j++) { // each cell of row
         if (suiteResults[i][j].includes("fail")) {
             console.log(suiteResults[i][j]);
         }
     }
 }
+
