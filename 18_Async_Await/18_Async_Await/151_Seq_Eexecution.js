@@ -10,6 +10,8 @@ function apiCall(name) {
     });
 }
 
+//Each API call waits 1000 ms (1 second).
+
 async function sequentialTest() {
     console.log("Starting of the Test");
     let start = Date.now();
@@ -22,7 +24,7 @@ async function sequentialTest() {
 
     let r3 = await apiCall("Report");
     console.log(r3);
-
+//is calculating how much time the test took to complete.
     console.log("Time: ~" + (Date.now() - start) + "ms");
 }
 

@@ -1,4 +1,6 @@
+//Yes — correct. When you import a default export, you do not use { }.
 // import { logBetter } from './logs/logger.js';
+
 import log from './logs/logger.js';
 log('Starting');
 

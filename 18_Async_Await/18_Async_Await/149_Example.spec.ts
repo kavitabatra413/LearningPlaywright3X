@@ -12,3 +12,9 @@ test('uses await in a Playwright test', async ({ page }) => {
 async function getExampleValue() {
     return 'abc';
 }
+
+
+//page.goto() returns a Promise because loading a web page takes time.
+//page is a Playwright-provided fixture representing a browser page/tab.
+//test → used to create a test.
+//expect → used to verify/assert something.
