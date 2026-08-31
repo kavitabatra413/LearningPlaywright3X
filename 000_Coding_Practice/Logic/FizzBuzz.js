@@ -1,5 +1,6 @@
-const data = Number(require('fs').readFileSync(0, 'utf8'));
-   for (let i = 1; i <= data; i++) {
+//const data = Number(require('fs').readFileSync(0, 'utf8'));
+  // for (let i = 1; i <= data; i++) {
+  for (let i = 1; i <= 15; i++) {
         if (i % 3 === 0 && i % 5 === 0) {
             console.log("FizzBuzz");
         } else if (i % 3 === 0) {

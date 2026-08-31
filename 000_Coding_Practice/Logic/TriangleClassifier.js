@@ -1,5 +1,6 @@
-const data = require('fs').readFileSync(0, 'utf8');
-let sides = data.trim().split(' ').map(Number);
+//sconst data = require('fs').readFileSync(0, 'utf8');
+//let sides = data.trim().split(' ').map(Number);
+let sides = [1,2,2];
 let a = sides[0];
 let b = sides[1];
 let c = sides[2];
