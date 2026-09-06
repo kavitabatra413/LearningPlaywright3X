@@ -21,3 +21,9 @@ let p = new Person("Pramod", "Vrad", "Jenny");
 console.log(p.getChild1());
 p.setChild1("VIRAD");
 console.log(p.getChild1());
+
+
+/*
+encapsulation hide variabels in a class
+Data abstraction hides classes
+*/

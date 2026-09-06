@@ -20,6 +20,7 @@ class E2ETest extends TestCase {
 }
 let tests = [new UnitTest(), new APITest(), new E2ETest()];
 tests.forEach(function (test) {
+//tests.forEach((test) => { 
     test.execute();
 });
 

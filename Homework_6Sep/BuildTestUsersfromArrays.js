@@ -1,4 +1,4 @@
-/*let names = ["Amit Kumar", "Neha Singh"];
+let names = ["Amit Kumar", "Neha Singh"];
 roles = ["admin", "viewer"];
 
 function create(names, roles) {
@@ -17,4 +17,4 @@ function create(names, roles) {
   });
 }
 
-console.log(create(names, roles));*/
+console.log(create(names, roles));
