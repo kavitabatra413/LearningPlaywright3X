@@ -1,7 +1,11 @@
 function wrapResponse<T>(statusCode: number, data: T): 
-{ statusCode: number; data: T } {
-    return { statusCode: statusCode, data: data };
-}
+{ statusCode: number; data: T }
+ {
+    return { 
+        statusCode: statusCode,
+         data: data
+         };
+} 
 
 let userResp = wrapResponse<string>(200, "admin"); // passed admin data
 console.log(userResp);

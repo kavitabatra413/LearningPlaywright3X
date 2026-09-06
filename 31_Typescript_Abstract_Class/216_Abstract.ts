@@ -1,3 +1,5 @@
+//never used in automation
+//parent class
 abstract class BaseTest{
     protected testName: string;
     constructor(testName: string) {
@@ -14,6 +16,7 @@ abstract class BaseTest{
     }
 }
 
+//child class
 class UITest extends BaseTest {
     setup(): void {
         console.log("  Setup: launch browser");

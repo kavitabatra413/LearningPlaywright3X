@@ -19,3 +19,4 @@ let config = new PlaywrightConfig("https://staging.app.com", 30000, 2);
 config.showConfig();
 
 // config.baseURL = "https://other.com";
+//  private readonly property cannot be modified outside the class

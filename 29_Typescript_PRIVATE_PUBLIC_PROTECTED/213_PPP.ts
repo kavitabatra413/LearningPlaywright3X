@@ -1,3 +1,4 @@
+//base class
 class APIClient{
     public baseURL: string;
     private apiKey: string;
@@ -20,11 +21,15 @@ class APIClient{
     }
 }
 
+//child class
 class UserAPIClient extends APIClient {
 
     getUsers(): void {
         console.log("Fetching users (timeout: " + this.timeout + "ms)");
         console.log("URL: " + this.baseURL + "/users");
+        //console.log("key: " + this.key + "/users"); not possible as key is
+        //  private in base class
+        
     }
 
 }

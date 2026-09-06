@@ -1,3 +1,4 @@
+//base class
 class BasePage {
     protected baseURL: string;
 
@@ -9,14 +10,16 @@ class BasePage {
     }
 
 }
+
+//child class
 class LoginPage extends BasePage {
     constructor() {
         super("https://app.staging.com");
     }
 
     login(user: string): void {
-        this.navigate("/login");
-        console.log("Typing " + user + " into #username");
+        this.navigate("/login");//protected method can be called in child class
+        console.log("Typing " + user + " into #username");//user is admin
         console.log("Clicking #login-btn");
     }
 }
