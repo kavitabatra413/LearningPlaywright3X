@@ -3,11 +3,11 @@
 let a = 10;
 let b = a;
 b = 99;
-console.log(a);
-console.log(b);
+console.log(a);//10
+console.log(b);//99
 a = 90;
-console.log(a);
-console.log(b);
+console.log(a);//90
+console.log(b);//99
 
 
 console.log("-----")

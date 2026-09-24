@@ -3,4 +3,4 @@ function greet(name){
 }
 
 let op = greet('Alice');
-console.log(op);
+console.log(op);//Hello. Alice

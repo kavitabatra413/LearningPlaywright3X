@@ -1,14 +1,14 @@
  let a = { status: "pass" };
- console.log(a.status);
- console.log(a["status"]);
+ console.log(a.status);//pass
+ console.log(a["status"]);//pass
 
 // let a1 = { status: 'pass' };
 // console.log(a1.status);
 
 // keys are case sensitive.
 // let a22 = { status: "pass", Status: "fail" };
-// console.log(a22["status"]);
-// console.log(a22["Status"]);
+// console.log(a22["status"]); //pass
+// console.log(a22["Status"]);//fail
 
 let a = { status: "pass" };
 let b = a;  //Copy the reference
@@ -26,10 +26,10 @@ const t_json = {
     "name": "pramod",
     "age": 10
 };
-console.log(t_json);
+console.log(t_json);//{ name: 'pramod', age: 10 }
 
 const t_js = {
     name: "pramod",
     age: 10
 };
-console.log(t_js);
+console.log(t_js);//{ name: 'pramod', age: 10 }

@@ -1,7 +1,7 @@
-// var a;
-console.log(a);
+var a;
+console.log(a);//undefined
 var a = "Pramod";
-console.log(a);
+console.log(a);//Pramod
 
 // ---- Phase 1: Memory Creation ----
 // var a  = undefined;

@@ -1,7 +1,7 @@
 let a = 10;
 let b = ++a;
-console.log(a);
-console.log(b);
+console.log(a);//11
+console.log(b);//11
 
 // //  Exp and Result Table
 // // Line No | a | Result b

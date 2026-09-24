@@ -28,3 +28,5 @@ switch (day) {
     default:
         console.log("No idea which day it is");
 }
+// Tue
+// 40

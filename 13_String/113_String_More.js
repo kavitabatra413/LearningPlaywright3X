@@ -18,6 +18,6 @@ console.log(msg.replace(/FAIL/g, "PASS")); // replace all with Regex
 // Concatenation
 
 console.log("Hello" + " " + "World");
-console.log("Hello".concat(" ", "World"));
+console.log("Hello".concat(" ", "World"));//Hello World
 //`${"Hello"} ${"World"}`;
-console.log("Hello".concat(" ", "World" ," World1"));
+console.log("Hello".concat(" ", "World" ," World1"));//Hello World World1

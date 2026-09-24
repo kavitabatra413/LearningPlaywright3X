@@ -6,7 +6,7 @@ let scores = [
 
 //sum of rows
 let rowSums = scores.map(row => row.reduce((a,b) => a+b));
-console.log(rowSums);
+console.log(rowSums);//[ 253, 175, 275 ]
 
 let suiteResults = [
     ["login-pass", "register-pass", "logout-pass"],  // Auth suite

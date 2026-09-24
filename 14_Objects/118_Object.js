@@ -4,3 +4,5 @@ const user = {
         return this.name;
     }
 }
+console.log(user.printName());//Pramod
+console.log(user.name);//Pramod

@@ -4,8 +4,8 @@ let str = "Login_Test_Pass_001";
 
 // slice(start, end) — negative indexes supported ( start, end-1)
 console.log(str.slice(0, 5)); // (0,4) -> "Login"
-console.log(str.slice(11));
-console.log(str.slice(-3));
+console.log(str.slice(11));//Pass_001
+console.log(str.slice(-3));//001
 
 let testNumber = str.slice(-3);
 
@@ -17,8 +17,8 @@ str.at(0);   // "L"
 str.at(-1);  // "1"
 
 //substring() → swaps start and end if start > end
-"JavaScript".substring(0, 4);     // ""
-"JavaScript".substring(4, 0);  // "Java"
+"JavaScript".substring(0, 4);  // "Java"
+console.log("JavaScript".substring(4, 0));  // "Java"
 
 console.log("JavaScript".slice(0, 4));  //Java
 console.log("JavaScript".slice(4, 0)); //start > end → "" (empty string)

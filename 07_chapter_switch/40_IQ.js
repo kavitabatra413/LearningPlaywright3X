@@ -19,3 +19,12 @@ switch (day) {
     default:
         console.log("Invalid day value");
 }
+
+/* no break
+Tuesday — Development
+Wednesday — Code Review
+Thursday — Testing
+Friday — Deployment & Retro
+Saturday — Rest Day
+Invalid day value
+*/

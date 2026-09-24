@@ -17,3 +17,10 @@ console.log(runTCRetry("Login"));
 console.log(runTCRetry("Login"));
 console.log(runTCRetry("Login"));
 console.log(runTCRetry("Login"));
+
+/*
+Attempt 1/3 for Login
+Attempt 2/3 for Login
+Attempt 3/3 for Login
+Login exceeded max retries (3)
+*/

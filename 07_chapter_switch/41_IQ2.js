@@ -24,5 +24,5 @@ switch (day) {
         console.log("Saturday — Rest Day");
         break;
     default:
-        console.log("Invalid day value");
+        console.log("Invalid day value");//Invalid day value
 }

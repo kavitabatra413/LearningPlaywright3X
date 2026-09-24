@@ -19,4 +19,4 @@ const qa_api_url = "https://qa.vwo.com/#login";
 
 console.log("-----");
 let abc = "anil";
-console.log(abc);
+console.log(abc);//anil

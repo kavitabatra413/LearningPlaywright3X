@@ -15,3 +15,4 @@ switch (true) {
     default:
         console.log("Unsatisfactory — Requires training");
 }
+//Excellent — Above expectations

@@ -11,3 +11,10 @@ switch (fruit) {
     default:
         console.log("Default reached");
 }
+
+/*
+Banana selected
+Cherry selected
+Date selected
+Default reached
+*/

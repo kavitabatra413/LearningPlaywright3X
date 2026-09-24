@@ -12,3 +12,4 @@ switch (responseCode) {
         console.log("Not status code match");
 
 }
+//404 Not found!

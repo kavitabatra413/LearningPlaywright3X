@@ -12,3 +12,12 @@ greetByName("Sangeetha");
 
 let name1 = greetByName("Sumit");
 console.log(name1);
+
+/*
+Hi Pramod
+Hi Dipak
+Hi Meeti
+Hi Sangeetha
+Hi Sumit
+undefined
+*/

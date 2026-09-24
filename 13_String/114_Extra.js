@@ -8,4 +8,4 @@ console.log(url.replace(/app/g, "qa"));
 // Template literal (joining with format)
 let parts = ["2024", "03", "07"];
 let date = parts.join("-");
-console.log(date);
+console.log(date);//2024-03-07

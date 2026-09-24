@@ -1,6 +1,6 @@
 //normal  function cdefinition
 function greet(name){
-    return `Hello, ${name}`;
+    return (`Hello, ${name}`);
 }
 
 // Function as Expression
@@ -9,5 +9,5 @@ const greet1 = function (name1){
 }
 
 
-console.log(greet("Bob"));
-console.log(greet1("Bob"));
+console.log(greet("Bob"));//Hello, Bob
+console.log(greet1("Bob"));//Hello, Bob

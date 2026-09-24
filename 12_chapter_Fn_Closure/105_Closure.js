@@ -2,10 +2,10 @@ function startBrowser() {
     let name = "edge";
     //installBrowser created as standalone function
     function installBrowser() {
-        console.log(name);
+        console.log(name);//edge
         let fail = true;
         if (fail) {
-            console.log('Failed!');
+            console.log('Failed!');//Failed!
         }
     }
     return installBrowser;

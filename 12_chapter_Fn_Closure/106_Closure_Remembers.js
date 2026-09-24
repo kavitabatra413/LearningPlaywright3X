@@ -11,8 +11,8 @@ let counter = makeCounter(0);
 counter.increment();
 counter.increment();
 counter.increment();
-console.log(counter.get());
+console.log(counter.get());//3
 counter.decrement();
-console.log(counter.get());
+console.log(counter.get());//2
 
 //increment(); //ReferenceError: increment is not defined

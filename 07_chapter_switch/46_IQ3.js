@@ -12,3 +12,4 @@ switch (x) {
         console.log("d");
 
 }
+//1

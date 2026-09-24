@@ -11,7 +11,7 @@ let b = "world";
 // Template literals (backticks) — allows expressions & multiline
 let name1 = "Alice";
 let msg = `Hello, ${name1}! 2 + 2 = ${2 + 2}`;
-console.log(msg);
+console.log(msg);//Hello, Alice! 2 + 2 = 4
 
 // Multiline
 let report = `
@@ -20,7 +20,7 @@ let report = `
   Duration: 320ms
 `;
 
-console.log(String(200));
+console.log(String(200));//200
 String(true); //  "true"
 String(null); // "null"
 String([1, 2]); // "[1,2]"

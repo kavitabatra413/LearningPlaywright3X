@@ -1,3 +1,3 @@
-console.log(username);
+console.log(username);//ReferenceError:
 let username = "Dutta";
-console.log(username);
+console.log(username);//Dutta

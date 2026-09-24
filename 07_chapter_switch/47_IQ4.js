@@ -8,6 +8,10 @@ switch (status) {
         console.log("0 matched");
         break;
 }
+
+//number
+//0 matched
+
 // === Strict, value and data type both of them shoul be same.
 // && ->  and gate
 // ||  or gate

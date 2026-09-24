@@ -10,9 +10,9 @@ function getStatus(code) {
     }
 }
 
-console.log(getStatus(200)); 
-console.log(getStatus(404));
-console.log(getStatus(500)); 
+console.log(getStatus(200)); //Success
+console.log(getStatus(404));//client error
+console.log(getStatus(500)); //server error
 
 console.log("----");
 
@@ -21,8 +21,9 @@ function logTest(name) {
     console.log(`Running: ${name}`);
     // no return statement
 }
+logTest("Hi this is a a log");//Running: Hi this is a a log
 
-logTest("Hi this is a a log");
+
 
 console.log("----");
 
@@ -30,15 +31,14 @@ function aaa() {
     return [2, 2, 3, 5, 4];
     //return {"name : pramod"}; - object
 }
-
 let result = aaa();
-console.log(result);
+console.log(result);//[ 2, 2, 3, 5, 4 ]
+
 
 console.log("----object");
 
 function aaa1() {
    return {name : "pramod"}; 
 }
-
 let result1 = aaa1();
-console.log(result1);
+console.log(result1);//{ name: 'pramod' }

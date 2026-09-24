@@ -17,3 +17,9 @@ const greet2 = (name2) => `Hello, ${name2}!`;
 console.log(greet("Pramod"));
 console.log(greet1("Pramod"));
 console.log(greet2("Pramod"));
+
+/*
+Hello, Pramod!
+Hello, Pramod!
+Hello, Pramod!
+*/

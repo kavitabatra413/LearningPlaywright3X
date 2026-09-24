@@ -1,9 +1,9 @@
-// let a = 10;
-// let b = --a;
-// console.log(b);
-// console.log(a);
-
 let a = 10;
-let b = a--;
-console.log(b);
-console.log(a);
+let b = --a;
+console.log(b);//9
+console.log(a);//9
+
+// let a = 10;
+// let b = a--;
+// console.log(b);//10
+// console.log(a);//9

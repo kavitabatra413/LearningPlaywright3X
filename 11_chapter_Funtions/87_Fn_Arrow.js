@@ -8,7 +8,7 @@ doubtA(10);
 
 //arrow function no argument
 const getEnv = () => "staging";
-console.log(getEnv());
+console.log(getEnv());//staging
 
 //Mutiline
 const getResult = (score) => {
@@ -16,5 +16,5 @@ const getResult = (score) => {
     return "fail";
 }
 
-console.log(getResult(78));
-console.log(getResult(43));
+console.log(getResult(78));//Pass
+console.log(getResult(43));//fail

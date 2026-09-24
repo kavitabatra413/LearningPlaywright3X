@@ -2,13 +2,13 @@
 
 function sayHello(){
 
-    console.log("Hi");
+    console.log("Hi");//Hi
     return "helllo";
 
 }
 
 let call = sayHello();
-console.log(call);
+console.log(call);//helllo
 
 
 function greetByHi(){
@@ -17,4 +17,4 @@ function greetByHi(){
 }
 
 let op = greetByHi();
-console.log(op);
+console.log(op);//[ 12, 2, 3, 3, 2 ]

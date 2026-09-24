@@ -3,8 +3,8 @@
 // =, ==, ===
 
 
-// = -> Assignment opearator
-// == -> losse comparsion ( sikh vs hindu )
+// = -> Assignmen opearator
+// == -> losse comtparsion ( sikh vs hindu )
 // === -> strict comparsion ( sikh vs hindu , languge, living)
 
 
@@ -28,6 +28,6 @@
 // ! -> not char
 console.log(5 != "5"); // lose -> datatype or value
 console.log(5 !== "5"); // true
-// console.log(5 !=== "5"); This dosn't
+// console.log(5 !=== "5"); This dosn't,invalid JavaScript
 
 console.log(5 === 5);

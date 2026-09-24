@@ -16,7 +16,7 @@ if(true){
 let b = "Pramod";
 // 10,000lines 
 if(true){
-    console.log(b); 
+    console.log(b); //ReferenceError: Cannot access 'b' before initialization
     let b = "temp";
 }
 

@@ -3,27 +3,30 @@
 
 let original = [1, 2, 3];
 let copy1 = [...original]; // spread
-//console.log(original);
-// console.log(copy1);
+console.log(original);//[ 1, 2, 3 ]
+ console.log(copy1);//[ 1, 2, 3 ]
+ let copyy =original
+ console.log(copyy);//[ 1, 2, 3 ]
+ console.log(original)//[ 1, 2, 3 ]
 
 let copy2 = original.slice();
-// console.log(copy2);
+console.log(copy2);//[ 1, 2, 3 ]
 
 let copy3 = Array.from(original);
-//  consle.log(copy3);
+ console.log(copy3);//[ 1, 2, 3 ]
 
 let copy4 = original.concat();
-// console.log(copy4);
+console.log(copy4);//[ 1, 2, 3 ]
 
 console.log(" ---- ");
 copy1.push(99);
-//console.log(original);
-//console.log(copy1);
+console.log(original);//[ 1, 2, 3 ]
+console.log(copy1);//[ 1, 2, 3, 99 ]
 
 // Deep cOPY
 let deep_copy_array = original;
 // Deep copy
 
 deep_copy_array.push(91);
-console.log(original);
-console.log(deep_copy_array);
+console.log(original);//[ 1, 2, 3, 91 ]
+console.log(deep_copy_array);//[ 1, 2, 3, 91 ]

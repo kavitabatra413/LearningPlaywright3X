@@ -4,3 +4,4 @@ let feel = (temp >= 40) ? "Very Hot" :
         (temp >= 20) ? "Warm" :
             (temp >= 10) ? "Cool" : "Cold";
 console.log("7. Temperature:", temp, "| Feel:", feel);
+//7. Temperature: 35 | Feel: Hot
