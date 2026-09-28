@@ -12,16 +12,20 @@ async function testAPI() {
         console.log("Clean up!!");
     }
 }
-
 testAPI();
 
 function step1() {
     console.log("1");
 }
-
 function step2() {
     console.log("2");
 }
-
 step1();
 step2();
+
+/*
+1
+2
+Error 503 Service Unavailable
+Clean up!!
+*/

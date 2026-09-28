@@ -6,6 +6,8 @@ Promise.all([checkAuth, checkDB, checkCache]).then(function (results) {
     console.log("All checks:", results);
 })
 
+// All checks: [ 'Auth Ok', 'DB OK', 'Cache OK' ]
+
 Promise.all([
     Promise.resolve("OK"),
     Promise.reject("DB DOWN"),
@@ -13,3 +15,4 @@ Promise.all([
 ])
     .then(function (r) { console.log(r); })
     .catch(function (err) { console.log("Failed:", err); });
+    //Failed: DB DOWN

@@ -23,3 +23,11 @@ async function parallelTest() {
 }
 
 parallelTest();
+
+/*
+Starting of the Test
+Auth Service: 200 OK
+User Service: 200 OK
+Payment Service: 200 OK
+Time: ~1001ms
+*/

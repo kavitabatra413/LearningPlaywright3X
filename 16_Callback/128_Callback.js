@@ -7,8 +7,12 @@ function placeOrder(item, callback){
 function print() {
     console.log("Normal Fn - Done with the order");
 }
-// First Way
+// First Way of calling
 placeOrder("Burger", print);
+/*
+Order Placed....
+Normal Fn - Done with the order
+*/
 
 // Sencond Way Anoy
 placeOrder("Burger", function(){

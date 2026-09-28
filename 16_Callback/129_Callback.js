@@ -14,6 +14,11 @@ function garimaStory(item, callMeWhenStoreIsEmpty){
     callMeWhenStoreIsEmpty();
 }
 
-garimaStory("starting shoppping", ()=>{
+garimaStory("starting shoppping", ()=>{   //arrow function.
      console.log("lets start shopping....")
 });
+/*
+Store is busy!
+Store is empty!
+lets start shopping....
+*/

@@ -9,15 +9,16 @@ async function getTestResults() {
 }
 //await is not mandatory when calling an async function.
 getTestResults().then(function (results) {
-    console.log(results);
+    console.log(results);//Pass
 });
+
+//----------------------------------------------
 
 async function runTest() {
     let result = await Promise.resolve("Login test passed");
-    console.log(result);
+    console.log(result);//Login test passed
 
     let result2 = await Promise.resolve("Dashboard test passed");
-    console.log(result2);
+    console.log(result2);//Dashboard test passed
 }
-
 runTest();

@@ -6,7 +6,7 @@ let apiCall = new Promise(async function (resolve, reject) {
 apiCall.then(function (data) {
     console.log("Data is success!!")
 }).catch(function (error) {
-    console.log(error)
+    console.log(error) //500 Error
 });
 
 

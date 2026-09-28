@@ -11,5 +11,5 @@ let slowServer = new Promise(function (resolve) {
 });
 
 Promise.race([fastServer, slowServer]).then(function (winner) {
-    console.log("Winner:", winner);
+    console.log("Winner:", winner);//Winner: Fast 100ms
 })

@@ -29,3 +29,11 @@ async function sequentialTest() {
 }
 
 sequentialTest();
+
+/*
+Starting of the Test
+Login: 200 OK
+Dashboard: 200 OK
+Report: 200 OK
+Time: ~3014ms
+*/

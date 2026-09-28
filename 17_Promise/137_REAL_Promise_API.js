@@ -9,3 +9,8 @@ apiCall.then(function(response){
 });
 
 // .then() runs ONLY when the promise resolves successfully.
+/*
+{ status: 200, body: 'User Data' }
+200
+User Data
+*/

@@ -10,6 +10,12 @@ let order = new Promise(function(resolve, reject){
 });
 
 console.log(order); //UnhandledPromiseRejection
-console.log(order.catch(function(err) { //err= "Order cancelled"
+console.log(order.catch(function(err) { 
     console.log(err);
 }));
+
+/*
+Promise { <rejected> 'Order cancelled' }
+Promise { <pending> }
+Order cancelled
+*/

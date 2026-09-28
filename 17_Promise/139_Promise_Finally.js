@@ -12,3 +12,8 @@ apiCall.then(function(data){
     // Always Executed!
      console.log("I will be executed anyhow!!");
 })
+
+/*
+{ status: 200 }
+I will be executed anyhow!!
+*/
