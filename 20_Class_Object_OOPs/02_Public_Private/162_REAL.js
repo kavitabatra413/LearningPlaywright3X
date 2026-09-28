@@ -13,8 +13,8 @@ class Browser {
         console.log("closing the browser")
     }
 }
-let chrome = new Browser("Chrome");
-let firefox = new Browser("Firefox");
-console.log(chrome.isOpen);
-chrome.startBrowser()
-chrome.closeBrowser()
+let chrome = new Browser("Chrome");//Chrome launched
+let firefox = new Browser("Firefox");//Firefox launched
+console.log(chrome.isOpen);//true
+chrome.startBrowser()//starting the browser
+chrome.closeBrowser()//closing the browser

@@ -8,7 +8,7 @@ class TestRunner {
         if (passed) {
             TestRunner.passCount++;  //1
         }
-        console.log(a);
+        console.log(a);//10 (4 times)
     }
     // non static fn
     pramod_fn() {
@@ -22,7 +22,7 @@ new TestRunner("Login", true);
 new TestRunner("Signup", false);
 new TestRunner("Cart", true);
 new TestRunner("Checkout", true);
-console.log(TestRunner.summary());
+console.log(TestRunner.summary());//3/4 passed
 
 let t11 = new TestRunner("loginTest", true);
 console.log (t11.pramod_fn()); // loginTest

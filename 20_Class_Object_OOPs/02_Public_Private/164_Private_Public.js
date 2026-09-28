@@ -16,5 +16,5 @@ class Credentials {
 let cred = new Credentials("admin", "scret_key_1234");
 //console.log(cred.apiKey); //undefined
 //console.log(cred.#apiKey); //SyntaxError: Private field '#apiKey' must be declared in an enclosing class
-console.log(cred.user);
-//console.log(cred.pramodgetAuthHeader());
+console.log(cred.user);//admin
+console.log(cred.pramodgetAuthHeader());//Bearer scret_key_1234

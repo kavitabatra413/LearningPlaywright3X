@@ -8,5 +8,5 @@ class APIClient {
 }
 let staging = new APIClient("https://staging.api.com");
 let prod = new APIClient("https://prod.api.com");
-console.log(staging.get("/users"));
-console.log(prod.get("/prod/users"));
+console.log(staging.get("/users"));//https://staging.api.com/users
+console.log(prod.get("/prod/users"));//https://prod.api.com/prod/users

@@ -10,15 +10,17 @@ class Car{
 }
 
 let hyndai_i10 = new Car("i10");
-console.log(hyndai_i10.name);
+console.log(hyndai_i10.name);//i10
 
 let hyndai_create = new Car("creta");
-console.log(hyndai_create.name);
+console.log(hyndai_create.name);//creta
 
 
 
 const a = new Car("i11");     // constructor runs → "i10"
 const b = new Car("Nexon");
+console.log(a.name);//i11
+console.log(b.name);//Nexon
 
 // class Bad { constructor(a) {} constructor(b) {} }
 

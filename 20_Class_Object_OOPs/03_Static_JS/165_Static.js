@@ -13,12 +13,12 @@ let t1 = new TestRunner("loginTest", true);
 let t2 = new TestRunner("signTest", false);
 let t3 = new TestRunner("dashboardTest", true);
 let t4 = new TestRunner("supportTest", true);
-console.log(TestRunner.totalTests);
-console.log(TestRunner.passCount);
-console.log(t1.name);
-console.log(t2.name);
-console.log(t3.name);
-console.log(t4.name);
+console.log(TestRunner.totalTests);//4
+console.log(TestRunner.passCount);//3
+console.log(t1.name);//loginTest
+console.log(t2.name);//signTest
+console.log(t3.name);//dashboardTest
+console.log(t4.name);//supportTest
 // name - non static
 // totalTests - static
 
