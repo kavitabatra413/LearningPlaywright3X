@@ -10,4 +10,4 @@ class APITest extends BaseTest {
 }
 
 let test = new APITest();
-test.setup();
+test.setup();//APITest: open browser

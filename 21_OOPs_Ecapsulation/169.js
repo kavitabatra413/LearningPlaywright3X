@@ -18,9 +18,9 @@ class Person{
 }
 let p = new Person("Pramod", "Vrad", "Jenny");
 // console.log(p.#child1);
-console.log(p.getChild1());
+console.log(p.getChild1());//Vrad
 p.setChild1("VIRAD");
-console.log(p.getChild1());
+console.log(p.getChild1());//VIRAD
 
 
 /*

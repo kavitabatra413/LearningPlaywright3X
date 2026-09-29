@@ -2,7 +2,7 @@ let a = 10;
 class Car{
     b;
     constructor(){
-        console.log(a);
+        console.log(a);//10
         this.b = 10;
     }
 }

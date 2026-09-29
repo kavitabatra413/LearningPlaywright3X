@@ -27,6 +27,7 @@ class AdminPage extends AuthPage {
 }
 
 let admin = new AdminPage();
-admin.open();
-admin.login("superadmin");
-admin.manageUsers();
+admin.open();//[OPEN] Admin Panel
+admin.login("superadmin");//[LOGIN] superadmin
+admin.manageUsers();//[ADMIN] Managing users
+

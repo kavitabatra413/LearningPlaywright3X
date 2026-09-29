@@ -8,7 +8,7 @@ function isSuccessCode(code: number): boolean {
 function logTestStep(step: string): void {
     console.log("[STEP] " + step);
 }
-console.log(buildEndpoint("https://api.com", "/users"));
-console.log("200 is success:", isSuccessCode(200));
-console.log("404 is success:", isSuccessCode(404));
-logTestStep("Navigate to login page");
+console.log(buildEndpoint("https://api.com", "/users"));//https://api.com/users
+console.log("200 is success:", isSuccessCode(200));//200 is success: true
+console.log("404 is success:", isSuccessCode(404));//404 is success: false
+logTestStep("Navigate to login page");//[STEP] Navigate to login page

@@ -12,5 +12,5 @@ class Environment {
 let env1 = new Environment();
 let env2 = new Environment("production", 8080);
 
-console.log(env1.getURL());
-console.log(env2.getURL());
+console.log(env1.getURL());//http://staging:3000
+console.log(env2.getURL());//http://production:8080

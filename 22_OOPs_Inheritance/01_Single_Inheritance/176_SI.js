@@ -14,5 +14,5 @@ class LoginPage extends BasePage {
 }
 
 let page = new LoginPage();
-page.open();
-page.close();
+page.open();//Opening the page 
+page.close();//Closing the page 

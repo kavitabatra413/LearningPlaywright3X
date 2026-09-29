@@ -10,11 +10,9 @@ class Car {
     setEngine(nameEngine) {
         this.#engine = nameEngine;
     }
-
-
 }
 
 let tesla = new Car("Tesla", "V8");
-console.log(tesla.getEngine());
+console.log(tesla.getEngine());//V8
 tesla.setEngine("V9");
-console.log(tesla.getEngine());
+console.log(tesla.getEngine());//V9

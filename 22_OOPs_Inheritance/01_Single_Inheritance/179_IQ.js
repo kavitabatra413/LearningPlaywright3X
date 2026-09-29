@@ -29,3 +29,11 @@ class UITest extends BaseTest {
 let test = new UITest();
 test.setup();
 test.teardown();
+
+/*
+Parent!
+Base: open browser
+UI: maximize window
+UI: take screenshot
+Base: close browser
+*/

@@ -20,8 +20,8 @@ class TestCase {
 
 const tc = new TestCase("login");
 tc.run(true);
-console.log(tc.getStatus());
+console.log(tc.getStatus());//PASSED
 new TestCase("login");
 new TestCase("login");
 new TestCase("login");
-console.log(TestCase.getCount())
+console.log(TestCase.getCount())//4

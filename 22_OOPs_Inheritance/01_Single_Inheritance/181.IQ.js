@@ -32,3 +32,17 @@ pages.forEach(function (page) {
     page.verify();
     console.log("---");
 });
+
+/*
+Verify: username field exists
+Verify: password field exists
+Verify: login button is visible
+---
+Verify: welcome message shown
+Verify: sidebar menu loaded
+---
+Verify: cart items displayed
+Verify: total price is correct
+---
+
+*/

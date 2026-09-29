@@ -12,7 +12,7 @@ class APIPage extends BaseTest{
 
 let btest = new BaseTest();
 let test = new APIPage();
-test.setup();
-btest.setup();
+test.setup();//APITest: open browser
+btest.setup();//Base: open browser
 
 // TS = JS + Rules

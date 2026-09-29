@@ -14,3 +14,4 @@ class Counter {
     }
 }
 new Counter().increment().increment().increment().display();//method chaining
+//Count: 3

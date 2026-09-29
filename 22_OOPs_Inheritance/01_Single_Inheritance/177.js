@@ -23,7 +23,7 @@ class Dog extends Animal {
     }
 }
 let dog = new Dog("Rex", "Labrador");
-dog.eat();
-dog.sleep();
-dog.bark();
-console.log(dog.breed);
+dog.eat();//Rex is eating
+dog.sleep();//Rex is sleeping
+dog.bark();//Foo Called!,Rex  is barking!
+console.log(dog.breed);//Labrador

@@ -11,5 +11,5 @@ class User {
 let u1 = new User("Alice");
 let u2 = new User("Bob");
 
-u1.greet();
-u2.greet();
+// u1.greet();//Hi, I am Alice
+u2.greet();//Hi, I am Bob

@@ -28,3 +28,14 @@ reports.forEach(function (r) {
     r.generate("5 tests passed, 1 failed");
     console.log("---");
 });
+
+/*
+<html><body>5 tests passed, 1 failed</body></html>
+---
+{"report": "5 tests passed, 1 failed"}
+---
+=== REPORT ===
+5 tests passed, 1 failed
+==============
+---
+*/

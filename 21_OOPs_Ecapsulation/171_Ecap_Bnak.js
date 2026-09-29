@@ -18,11 +18,11 @@ class ICICI {
 }
 
 let pramod = new ICICI("Pramod", 1000);
-console.log(pramod.getBalance());
-pramod.setBalance(10000000, false);
-console.log(pramod.getBalance());
+console.log(pramod.getBalance());//1000
+pramod.setBalance(10000000,false);//Not allowed
+console.log(pramod.getBalance()); //1000
 
 let pramod_father = new ICICI("Pramod", 2000);
-console.log(pramod_father.getBalance());
+console.log(pramod_father.getBalance());//2000
 pramod_father.setBalance(300000, true);
-console.log(pramod_father.getBalance());
+console.log(pramod_father.getBalance());//300000

@@ -13,4 +13,4 @@ class C extends B {
         return "C>" + super.who(); 
     } 
 }
-console.log(new C().who());
+console.log(new C().who()); //C>B>A
